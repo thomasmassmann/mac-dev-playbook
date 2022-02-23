@@ -2,9 +2,10 @@
 # Customize shell
 
 - name: Get the path to ZSH
-  become: false
-  local_action: command which zsh
+  command: which zsh
   register: zsh_path
+  changed_when: false
+  check_mode: false
 
 - name: Ensure homebrew zsh is in allowed shells
   lineinfile:
@@ -17,8 +18,15 @@
   args:
     creates: "/Users/{{ lookup('env', 'USER') }}/.oh-my-zsh"
 
+- name: Get the current shell
+  command: echo $SHELL
+  register: current_shell
+  changed_when: false
+  check_mode: false
+
 - name: Set ZSH as the default shell
-  shell: chsh -s $(which zsh) {{ lookup('env', 'USER') }}
+  command: chsh -s $(which zsh) {{ lookup('env', 'USER') }}
+  when: "'/bin/zsh' not in current_shell.stdout"
   become: true
 
 - name: Get the powerline fonts.
@@ -29,8 +37,9 @@
   become: false
 
 - name: Install the powerline fonts
-  shell: "~/Development/powerline-fonts/install.sh && touch ~/Library/Fonts/powerline_installed.txt"
-  args:
+  command:
+    cmd: "./install.sh && touch ~/Library/Fonts/powerline_installed.txt"
+    chdir: "~/Development/powerline-fonts"
     creates: "$HOME/Library/Fonts/powerline_installed.txt"
 
 - name: Get the custom theme
