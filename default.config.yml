@@ -149,6 +149,7 @@ homebrew_installed_packages:
   - nvm
   - mysql-client
   - mysql
+  - nvm
   - openjdk
   - openldap
   - openssl
@@ -242,6 +243,15 @@ mas_password: ""
 
 osx_script: "~/.osx --no-restart"
 
+node_versions:
+  - v10.14.2
+  - v10.24.1
+  - v12.16.2
+  - v13.13.0
+  - v14.15.1
+
+node_default_version: v14.15.1
+
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
 # installed, eg. through homebrew.
@@ -253,10 +263,13 @@ gem_packages: []
 # - name: bundler
 #   state: present # present/absent/latest, default: present
 #   version: "~> 1.15.1" # default: N/A
-npm_packages: []
+npm_packages:
 # - name: webpack
 #   state: present # present/absent/latest, default: present
 #   version: "^2.6" # default: N/A
+  - name: grunt
+    state: present
+
 pip_packages: []
 # - name: mkdocs
 #   state: present # present/absent/latest, default: present
