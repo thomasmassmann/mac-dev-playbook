@@ -1,13 +1,14 @@
 ---
 downloads: ~/.ansible-downloads/
 
+configure_dock: true
 configure_dotfiles: true
 configure_osx: true
 configure_shell: true
+configure_sublime: false
+configure_sudoers: false
 configure_terminal: true
 
-# Set to 'true' to configure the Dock via dockutil.
-configure_dock: true
 dockitems_remove:
   - "App Store"
   - FaceTime
@@ -116,7 +117,6 @@ dockitems_persist:
     path: "/System/Applications/Books.app"
     pos: 31
 
-configure_sudoers: false
 sudoers_custom_config: ""
 # Example:
 # sudoers_custom_config: |
@@ -127,11 +127,13 @@ dotfiles_repo: https://github.com/thomasmassmann/dotfiles.git
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/Development/dotfiles
 dotfiles_files:
+  - .aliases
+  - .gemrc
+  - .gitconfig
+  - .gitignore
+  - .mrbob
+  - .nuxtrc
   - .zshrc
-  # - .gitignore
-  # - .inputrc
-  # - .osx
-  # - .vimrc
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
@@ -145,6 +147,7 @@ homebrew_installed_packages:
   - gradle
   - grunt-completion
   - htop
+  - kdiff3
   - node
   - nvm
   - mysql-client
@@ -274,24 +277,6 @@ pip_packages: []
 # - name: mkdocs
 #   state: present # present/absent/latest, default: present
 #   version: "0.16.3" # default: N/A
-
-# Set to 'true' to configure Sublime Text.
-configure_sublime: false
-sublime_base_path: "~/Library/Application Support/Sublime Text"
-sublime_config_path: "Packages/User"
-sublime_package_control:
-  - "DocBlockr"
-  - "Dockerfile Syntax Highlighting"
-  - "FileDiffs"
-  - "GitHub Flavored Markdown Preview"
-  - "Jinja2"
-  - "Package Control"
-  - "PHP-Twig"
-  - "Pretty JSON"
-  - "SublimeLinter"
-  - "SublimeLinter-contrib-yamllint"
-  - "TrailingSpaces"
-  - "WordCount"
 
 zsh_theme_name: powerlevel9k
 zsh_theme_repo: https://github.com/bhilburn/powerlevel9k.git
