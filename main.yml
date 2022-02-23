@@ -38,6 +38,10 @@
       when: configure_sudoers
       tags: ["sudoers"]
 
+    - import_tasks: tasks/shell.yml
+      when: configure_shell
+      tags: ["shell"]
+
     - import_tasks: tasks/terminal.yml
       when: configure_terminal
       tags: ["terminal"]

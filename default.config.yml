@@ -2,8 +2,9 @@
 downloads: ~/.ansible-downloads/
 
 configure_dotfiles: true
-configure_terminal: true
 configure_osx: true
+configure_shell: true
+configure_terminal: true
 
 # Set to 'true' to configure the Dock via dockutil.
 configure_dock: true
@@ -278,6 +279,9 @@ sublime_package_control:
   - "SublimeLinter-contrib-yamllint"
   - "TrailingSpaces"
   - "WordCount"
+
+zsh_theme_name: powerlevel9k
+zsh_theme_repo: https://github.com/bhilburn/powerlevel9k.git
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
