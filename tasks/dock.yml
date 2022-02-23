@@ -1,0 +1,13 @@
+---
+# Customize dock
+- name: Add spacer after system apps at position 4
+  command: dockutil --add '' --type spacer --section apps --position 4
+
+- name: Add spacer after browsers at position 13
+  command: dockutil --add '' --type spacer --section apps --position 13
+
+- name: Add spacer after development apps at position 23
+  command: dockutil --add '' --type spacer --section apps --position 23
+
+- name: Add spacer after productivity apps at position 31
+  command: dockutil --add '' --type spacer --section apps --position 31

@@ -6,16 +6,114 @@ configure_terminal: true
 configure_osx: true
 
 # Set to 'true' to configure the Dock via dockutil.
-configure_dock: false
-dockitems_remove: []
-# - Launchpad
-# - TV
-# - Podcasts
-# - 'App Store'
-dockitems_persist: []
-# - name: "Sublime Text"
-#   path: "/Applications/Sublime Text.app/"
-#   pos: 5
+configure_dock: true
+dockitems_remove:
+  - "App Store"
+  - FaceTime
+  - Launchpad
+  - Mail
+  - Maps
+  - Music
+  - Podcasts
+  - TV
+dockitems_persist:
+  - name: "System Preferences"
+    path: "/System/Applications/System Preferences.app"
+    pos: 1
+  - name: "1Password 7"
+    path: "/Applications/1Password 7.app"
+    pos: 2
+  - name: "Postbox"
+    path: "/Applications/Postbox.app"
+    pos: 3
+  # Spacer at #4 (see tasks/dock.yml)
+  - name: "Firefox Nightly"
+    path: "/Applications/Firefox Nightly.app"
+    pos: 4
+  - name: "Firefox"
+    path: "/Applications/Firefox.app"
+    pos: 5
+  - name: "Firefox Developer Edition"
+    path: "/Applications/Firefox Developer Edition.app"
+    pos: 6
+  - name: "Safari"
+    path: "/Applications/Safari.app"
+    pos: 7
+  - name: "Safari Technology Preview"
+    path: "/Applications/Safari Technology Preview.app"
+    pos: 8
+  - name: "Google Chrome"
+    path: "/Applications/Google Chrome.app"
+    pos: 9
+  - name: "Google Chrome Canary"
+    path: "/Applications/Google Chrome Canary.app"
+    pos: 10
+  - name: "Google Chrome Dev"
+    path: "/Applications/Google Chrome Dev.app"
+    pos: 11
+  # Spacer at #13 (see tasks/dock.yml)
+  - name: "Sourcetree"
+    path: "/Applications/Sourcetree.app"
+    pos: 12
+  - name: "Visual Studio Code"
+    path: "/Applications/Visual Studio Code.app"
+    pos: 13
+  - name: "Xcode"
+    path: "/Applications/Xcode.app"
+    pos: 14
+  - name: "Android Studio"
+    path: "/Applications/Android Studio.app"
+    pos: 15
+  - name: "Sketch"
+    path: "/Applications/Sketch.app"
+    pos: 16
+  - name: "Figma"
+    path: "/Applications/Figma.app"
+    pos: 17
+  - name: "Terminal"
+    path: "/System/Applications/Utilities/Terminal.app"
+    pos: 18
+  - name: "Postman"
+    path: "/Applications/Postman.app"
+    pos: 19
+  - name: "Colour Contrast Analyser (CCA)"
+    path: "/Applications/Colour Contrast Analyser (CCA).app"
+    pos: 20
+  # Spacer at #23 (see tasks/dock.yml)
+  - name: "Contacts"
+    path: "/System/Applications/Contacts.app"
+    pos: 21
+  - name: "Calendar"
+    path: "/System/Applications/Calendar.app"
+    pos: 22
+  - name: "Obsidian"
+    path: "/Applications/Obsidian.app"
+    pos: 23
+  - name: "Notion"
+    path: "/Applications/Notion.app"
+    pos: 24
+  - name: "GoodNotes"
+    path: "/Applications/GoodNotes.app"
+    pos: 25
+  - name: "Notes"
+    path: "/System/Applications/Notes.app"
+    pos: 26
+  - name: "Reminders"
+    path: "/System/Applications/Reminders.app"
+    pos: 27
+  # Spacer at #31 (see tasks/dock.yml)
+  - name: "Photos"
+    path: "/System/Applications/Photos.app"
+    pos: 28
+  - name: "Messages"
+    path: "/System/Applications/Messages.app"
+    pos: 29
+  - name: "Discord"
+    path: "/Applications/Discord.app"
+    pos: 30
+  - name: "Books"
+    path: "/System/Applications/Books.app"
+    pos: 31
 
 configure_sudoers: false
 sudoers_custom_config: ""
