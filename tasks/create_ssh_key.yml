@@ -1,0 +1,20 @@
+---
+- name: Create a new ssh key pair
+  block:
+    - name: Decode private key
+      shell: echo {{ item.key }} | base64 --decode
+      register: ssh_private_key_decoded
+      changed_when: false
+      check_mode: false
+
+    - name: Create private key
+      template:
+        src: templates/ssh_key.j2
+        dest: "~/.ssh/{{ item.id }}"
+        mode: 0600
+
+    - name: Create public key
+      template:
+        src: templates/ssh_key_pub.j2
+        dest: ~/.ssh/{{ item.id }}.pub
+        mode: 0644

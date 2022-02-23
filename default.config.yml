@@ -5,6 +5,7 @@ configure_dock: true
 configure_dotfiles: true
 configure_osx: true
 configure_shell: true
+configure_ssh: true
 configure_sublime: false
 configure_sudoers: false
 configure_terminal: true

@@ -1,0 +1,17 @@
+---
+- name: Ensure ssh directory exists
+  file: 
+    path: ~/.ssh
+    state: directory
+    mode: 0700
+
+- name: Add ssh config
+  copy:
+    src: files/ssh/config
+    dest: ~/.ssh/config
+    mode: 0600
+    
+- name: Create ssh keys
+  include_tasks: create_ssh_key.yml
+  loop: "{{ ssh_keys }}"
+  no_log: true
