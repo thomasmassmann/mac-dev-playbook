@@ -125,7 +125,19 @@ homebrew_cask_apps:
   - zoom
 
 # See `geerlingguy.mas` role documentation for usage instructions.
-mas_installed_apps: []
+mas_installed_apps:
+  - { id: 405580712, name: "StuffIt Expander" }
+  - { id: 408981434, name: "iMovie" }
+  - { id: 409183694, name: "Keynote" }
+  - { id: 409201541, name: "Pages" }
+  - { id: 409203825, name: "Numbers" }
+  - { id: 494803304, name: "WiFi Explorer" }
+  - { id: 497799835, name: "Xcode" }
+  - { id: 1153157709, name: "Speedtest" }
+  - { id: 1388020431, name: "DevCleaner" }
+  - { id: 1444383602, name: "GoodNotes" }
+mas_uninstalled_apps:
+  - { id: 682658836, name: "GarageBand" }
 mas_email: ""
 mas_password: ""
 
