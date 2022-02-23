@@ -21,9 +21,28 @@
   shell: chsh -s $(which zsh) {{ lookup('env', 'USER') }}
   become: true
 
+- name: Get the powerline fonts.
+  git:
+    repo: "https://github.com/powerline/fonts"
+    dest: "~/Development/powerline-fonts"
+    accept_hostkey: true
+  become: false
+
+- name: Install the powerline fonts
+  shell: "~/Development/powerline-fonts/install.sh && touch ~/Library/Fonts/powerline_installed.txt"
+  args:
+    creates: "$HOME/Library/Fonts/powerline_installed.txt"
+
 - name: Get the custom theme
   git:
     repo: "{{ zsh_theme_repo }}"
     dest: "/Users/{{ lookup('env', 'USER') }}/.oh-my-zsh/custom/themes/{{ zsh_theme_name }}"
+    accept_hostkey: true
+  become: false
+
+- name: Get the zsh-completions plugin
+  git:
+    repo: "https://github.com/zsh-users/zsh-completions"
+    dest: "/Users/{{ lookup('env', 'USER') }}/.oh-my-zsh/custom/plugins/zsh-completions"
     accept_hostkey: true
   become: false
