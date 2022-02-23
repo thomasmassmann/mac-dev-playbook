@@ -38,48 +38,85 @@ homebrew_installed_packages:
   # - ansible # Installed via Pip.
   - autoconf
   - bash-completion
-  - doxygen
+  - cocoapods
+  - curl
+  - docker-completion
   - gettext
-  - gifsicle
   - git
-  - github/gh/gh
-  - go
-  - gpg
-  - httpie
-  - iperf
-  - libevent
-  - sqlite
-  - mcrypt
-  - nmap
+  - gradle
+  - grunt-completion
+  - htop
   - node
   - nvm
-  - php
-  - ssh-copy-id
-  - cowsay
-  - readline
+  - mysql-client
+  - mysql
+  - openjdk
+  - openldap
   - openssl
-  - pv
+  - pip-completion
+  - postgresql
+  - pyenv
+  - pyenv-virtualenv
+  - python
+  - python3
+  - python@3.9
+  - readline
+  - sqlite
+  - ssh-copy-id
+  - tree
   - wget
-  - wrk
+  - yarn
+  - zsh
+  - zsh-completions
+  - zsh-git-prompt
   - zsh-history-substring-search
 
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - homebrew/cask-drivers
+  - homebrew/cask-versions
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
+  - 1password
+  - android-sdk
+  - android-studio
+  - appcleaner
+  # Current version has a download error
+  # - balsamiq-wireframes
   - chromedriver
+  - colour-contrast-analyser
+  - discord
   - docker
-  - dropbox
+  - figma
   - firefox
+  - firefox-developer-edition
+  - firefox-nightly
   - google-chrome
+  - google-chrome-canary
+  - google-chrome-dev
+  - gpg-suite
   - handbrake
-  - licecap
-  - sequel-ace
+  - istat-menus
+  - micro-snitch
+  - moom
+  - notion
+  - obsidian
+  - postbox
+  - postman
+  # - safari-technology-preview
+  - sketch
   - slack
-  - sublime-text
-  - transmit
+  - sourcetree
+  - teamviewer
+  - tnefs-enough
+  - transmit4
+  - tunnelblick
+  - vagrant
+  - virtualbox
+  - visual-studio-code
+  - zoom
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
