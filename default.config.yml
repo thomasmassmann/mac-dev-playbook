@@ -245,7 +245,7 @@ mas_uninstalled_apps:
 mas_email: ""
 mas_password: ""
 
-osx_script: "~/.osx --no-restart"
+osx_script: "~/.osx"
 
 node_versions:
   - v10.14.2
