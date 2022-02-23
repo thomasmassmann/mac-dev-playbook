@@ -132,6 +132,7 @@ dotfiles_files:
   - .gitconfig
   - .gitignore
   - .mrbob
+  - .osx
   - .nuxtrc
   - .zshrc
 
@@ -147,7 +148,6 @@ homebrew_installed_packages:
   - gradle
   - grunt-completion
   - htop
-  - kdiff3
   - node
   - nvm
   - mysql-client
@@ -203,6 +203,7 @@ homebrew_cask_apps:
   - gpg-suite
   - handbrake
   - istat-menus
+  - kdiff3
   - kitematic
   - libreoffice
   - micro-snitch
