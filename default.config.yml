@@ -80,6 +80,7 @@ homebrew_taps:
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - 1password
+  - adoptopenjdk8
   - android-sdk
   - android-studio
   - appcleaner
@@ -99,16 +100,21 @@ homebrew_cask_apps:
   - gpg-suite
   - handbrake
   - istat-menus
+  - kitematic
+  - libreoffice
   - micro-snitch
   - moom
   - notion
   - obsidian
+  - poedit
   - postbox
   - postman
   # - safari-technology-preview
   - sketch
   - slack
   - sourcetree
+  - synology-drive
+  - synology-photo-station-uploader
   - teamviewer
   - tnefs-enough
   - transmit4
