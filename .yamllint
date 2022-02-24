@@ -9,5 +9,6 @@ rules:
 ignore: |
   .github/stale.yml
   roles
+  setup_repositories.yml
   vars/repositories.yml
   vars/settings.yml
