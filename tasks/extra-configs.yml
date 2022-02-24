@@ -1,0 +1,21 @@
+---
+- name: Ensure .buildout folder exists
+  file:
+    path: "~/.buildout"
+    state: directory
+    mode: 0755
+
+- name: Ensure buildout directories exist.
+  file:
+    path: "~/.buildout/{{ item }}"
+    state: directory
+    mode: 0755
+  with_items:
+    - shared-eggs
+    - downloads-cache
+    - extends-cache
+
+- name: Add buildout configuration
+  template:
+    src: templates/buildout-default.cfg.j2
+    dest: ~/.buildout/default.cfg

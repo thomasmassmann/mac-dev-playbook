@@ -57,6 +57,9 @@
     - import_tasks: tasks/extra-packages.yml
       tags: ["extra-packages"]
 
+    - import_tasks: tasks/extra-configs.yml
+      tags: ["extra-configs"]
+
     - import_tasks: tasks/sublime-text.yml
       when: configure_sublime
       tags: ["sublime-text"]
