@@ -8,3 +8,5 @@ rules:
 
 ignore: |
   .github/stale.yml
+  roles
+  vars/settings.yml

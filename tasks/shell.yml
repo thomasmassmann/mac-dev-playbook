@@ -34,6 +34,7 @@
     repo: "https://github.com/powerline/fonts"
     dest: "~/Development/powerline-fonts"
     accept_hostkey: true
+    version: "master"
   become: false
 
 - name: Install the powerline fonts
@@ -54,4 +55,5 @@
     repo: "https://github.com/zsh-users/zsh-completions"
     dest: "/Users/{{ lookup('env', 'USER') }}/.oh-my-zsh/custom/plugins/zsh-completions"
     accept_hostkey: true
+    version: "0.33.0"
   become: false

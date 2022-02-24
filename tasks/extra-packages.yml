@@ -13,12 +13,12 @@
 
 - name: Install nvm node versions
   shell: "source ~/.nvm/nvm.sh && nvm install {{ item }}"
-  when: "'{{ item }}' not in installed_node_versions.stdout"
+  when: "item|string not in installed_node_versions.stdout"
   loop: "{{ node_versions }}"
 
 - name: Set nvm node default version
   shell: "source ~/.nvm/nvm.sh && nvm alias default {{ node_default_version }}"
-  when: "'{{ node_default_version }}' not in configured_node_default_version.stdout"
+  when: "node_default_version|string not in configured_node_default_version.stdout"
 
 - name: Install global Composer packages.
   composer:
