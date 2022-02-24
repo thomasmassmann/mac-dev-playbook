@@ -14,6 +14,8 @@
     - name: Remove all spacer tiles
       command: dockutil --remove spacer-tiles
       ignore_errors: true
+      changed_when: false
+      check_mode: false
       when: configure_dock
       tags: ["dock"]
 
