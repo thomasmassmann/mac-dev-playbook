@@ -61,8 +61,8 @@ dockitems_persist:
   - name: "Visual Studio Code"
     path: "/Applications/Visual Studio Code.app"
     pos: 13
-  - name: "Xcode"
-    path: "/Applications/Xcode.app"
+  - name: "Xcode-beta"
+    path: "/Applications/Xcode-beta.app"
     pos: 14
   - name: "Android Studio"
     path: "/Applications/Android Studio.app"
@@ -244,8 +244,8 @@ mas_installed_apps:
     name: "Numbers"
   - id: 494803304
     name: "WiFi Explorer"
-  - id: 497799835
-    name: "Xcode"
+  # - id: 497799835
+  #   name: "Xcode"
   - id: 1153157709
     name: "Speedtest"
   - id: 1388020431
