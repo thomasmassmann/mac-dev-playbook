@@ -13,6 +13,8 @@
       tags: ["always"]
     - name: Remove all spacer tiles
       command: dockutil --remove spacer-tiles
+      ignore_errors: true
+      when: configure_dock
       tags: ["dock"]
 
   roles:
