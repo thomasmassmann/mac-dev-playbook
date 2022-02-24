@@ -2,6 +2,8 @@
 roles:
   - name: elliotweiser.osx-command-line-tools
   - name: geerlingguy.dotfiles
+  - name: thomasmassmann.scm
+    src: https://github.com/thomasmassmann/ansible-role-scm
 
 collections:
   - name: geerlingguy.mac
