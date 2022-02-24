@@ -24,6 +24,7 @@
       register: key_available
       changed_when: false
       check_mode: false
+      ignore_errors: true
 
     - name: Add key to ssh agent
       command: "ssh-add ~/.ssh/{{ item.id }}"
