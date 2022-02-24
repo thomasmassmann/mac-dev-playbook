@@ -214,6 +214,7 @@ homebrew_cask_apps:
   - poedit
   - postbox
   - postman
+  - protonmail-bridge
   # - safari-technology-preview
   - sketch
   - slack
@@ -280,6 +281,8 @@ gem_packages: []
 #   state: present # present/absent/latest, default: present
 #   version: "~> 1.15.1" # default: N/A
 npm_packages:
+  - name: cordova
+    state: present
   - name: grunt
     state: present
 # - name: webpack
