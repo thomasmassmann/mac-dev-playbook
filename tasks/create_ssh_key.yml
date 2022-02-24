@@ -18,3 +18,16 @@
         src: templates/ssh_key_pub.j2
         dest: ~/.ssh/{{ item.id }}.pub
         mode: 0644
+
+    - name: Check if key is already in ssh agent
+      command: "ssh-add -l | grep '/.ssh/{{ item.id }} ('"
+      register: key_available
+      changed_when: false
+      check_mode: false
+
+    - name: Add key to ssh agent
+      command: "ssh-add ~/.ssh/{{ item.id }}"
+      changed_when: false
+      check_mode: false
+      when: "item.id|string not in key_available.stdout"
+      ignore_errors: true
