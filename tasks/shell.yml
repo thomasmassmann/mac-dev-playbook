@@ -48,6 +48,7 @@
     repo: "{{ zsh_theme_repo }}"
     dest: "/Users/{{ lookup('env', 'USER') }}/.oh-my-zsh/custom/themes/{{ zsh_theme_name }}"
     accept_hostkey: true
+    version: "{{ zsh_theme_repo_version }}"
   become: false
 
 - name: Get the zsh-completions plugin

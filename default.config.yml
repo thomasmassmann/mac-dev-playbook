@@ -291,8 +291,9 @@ pip_packages: []
 #   state: present # present/absent/latest, default: present
 #   version: "0.16.3" # default: N/A
 
-zsh_theme_name: powerlevel9k
-zsh_theme_repo: https://github.com/bhilburn/powerlevel9k.git
+zsh_theme_name: powerlevel10k
+zsh_theme_repo: https://github.com/romkatv/powerlevel10k.git
+zsh_theme_repo_version: v1.16.1
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
