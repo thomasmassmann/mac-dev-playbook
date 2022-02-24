@@ -1,4 +1,13 @@
 ---
+configure_dock: false
+configure_dotfiles: false
+configure_osx: false
+configure_shell: false
+configure_ssh: false
+configure_sublime: false
+configure_sudoers: false
+configure_terminal: false
+
 homebrew_installed_packages:
   - autoconf
   - bash-completion

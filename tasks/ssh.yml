@@ -1,4 +1,6 @@
 ---
+- name: Include task configuration
+  include_vars: vars/settings.yml
 - name: Ensure ssh directory exists
   file:
     path: ~/.ssh
