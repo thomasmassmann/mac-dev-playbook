@@ -1,4 +1,25 @@
 ---
+- name: Check installed nvm node versions
+  shell: "source ~/.nvm/nvm.sh && nvm ls"
+  register: installed_node_versions
+  changed_when: false
+  check_mode: false
+
+- name: Check default nvm node version
+  shell: "source ~/.nvm/nvm.sh && nvm alias default "
+  register: configured_node_default_version
+  changed_when: false
+  check_mode: false
+
+- name: Install nvm node versions
+  shell: "source ~/.nvm/nvm.sh && nvm install {{ item }}"
+  when: "item|string not in installed_node_versions.stdout"
+  loop: "{{ node_versions }}"
+
+- name: Set nvm node default version
+  shell: "source ~/.nvm/nvm.sh && nvm alias default {{ node_default_version }}"
+  when: "node_default_version|string not in configured_node_default_version.stdout"
+
 - name: Ensure .buildout folder exists
   file:
     path: "~/.buildout"
