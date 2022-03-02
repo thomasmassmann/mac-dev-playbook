@@ -209,6 +209,7 @@ homebrew_cask_apps:
   - kitematic
   - libreoffice
   - micro-snitch
+  - microsoft-teams
   - moom
   - notion
   - obsidian
