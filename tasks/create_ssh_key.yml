@@ -1,4 +1,10 @@
 ---
+- name: Load existing ssh keys into agent
+  command: ssh-add --apple-load-keychain
+  changed_when: false
+  check_mode: false
+  become: false
+
 - name: Create a new ssh key pair
   block:
     - name: Decode private key
@@ -31,7 +37,7 @@
       become: false
 
     - name: Add key to ssh agent
-      command: "ssh-add ~/.ssh/{{ item.id }}"
+      command: "ssh-add --apple-use-keychain ~/.ssh/{{ item.id }}"
       changed_when: false
       check_mode: false
       when: "item.id|string not in key_available.stdout"
