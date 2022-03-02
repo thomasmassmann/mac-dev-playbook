@@ -217,6 +217,7 @@ homebrew_cask_apps:
   - postbox
   - postman
   - protonmail-bridge
+  - rocket
   # - safari-technology-preview
   - sketch
   - slack
