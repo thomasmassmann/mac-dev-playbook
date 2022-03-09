@@ -40,3 +40,19 @@
   template:
     src: templates/buildout-default.cfg.j2
     dest: ~/.buildout/default.cfg
+
+- name: Check installed pyenv python versions
+  shell: "pyenv versions"
+  register: installed_pyenv_versions
+  changed_when: false
+  check_mode: false
+
+- name: Install pyenv python versions
+  shell: "pyenv install {{ item }}"
+  when: "item|string not in installed_pyenv_versions.stdout"
+  loop: "{{ pyenv_versions }}"
+
+- name: Add pyenv virtualenvs
+  shell: "pyenv virtualenv {{ item.python }} {{ item.name }}"
+  when: "item.name|string not in installed_pyenv_versions.stdout"
+  loop: "{{ pyenv_virtualenvs }}"

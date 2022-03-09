@@ -272,6 +272,38 @@ node_versions:
 
 node_default_version: v14.15.1
 
+pyenv_versions:
+  - 2.7.18
+  - 3.7.12
+  - 3.8.12
+  - 3.9.9
+
+pyenv_virtualenvs:
+  - name: Cusy-Plone52-Py37
+    python: 3.7.12
+  - name: Dynamore-Plone51-Py27
+    python: 2.7.18
+  - name: Dynamore-Plone52-Py37
+    python: 3.7.12
+  - name: Plone52-Py37
+    python: 3.7.12
+  - name: Plone6-Py39
+    python: 3.9.9
+  - name: SFU-Dunavant-Core-Py39
+    python: 3.9.9
+  - name: SFU-Dunavant-Warehouse-Py39
+    python: 3.9.9
+  - name: SLWF-Plone51-Py27
+    python: 2.7.18
+  - name: SLWF-Plone52-Py27
+    python: 2.7.18
+  - name: SLWF-Plone52-Py37
+    python: 3.7.12
+  - name: SLWF-Plone6-Py39
+    python: 3.9.9
+  - name: SFU-CNM-PY39
+    python: 3.9.9
+
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
 # installed, eg. through homebrew.
