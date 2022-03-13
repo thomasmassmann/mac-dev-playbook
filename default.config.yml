@@ -48,11 +48,11 @@ dockitems_persist:
   - name: "Google Chrome"
     path: "/Applications/Google Chrome.app"
     pos: 9
-  - name: "Google Chrome Canary"
-    path: "/Applications/Google Chrome Canary.app"
-    pos: 10
   - name: "Google Chrome Dev"
     path: "/Applications/Google Chrome Dev.app"
+    pos: 10
+  - name: "Opera"
+    path: "/Applications/Opera.app"
     pos: 11
   # Spacer at #13 (see tasks/dock.yml)
   - name: "Sourcetree"
@@ -200,7 +200,6 @@ homebrew_cask_apps:
   - firefox-developer-edition
   - firefox-nightly
   - google-chrome
-  - google-chrome-canary
   - google-chrome-dev
   - gpg-suite
   - handbrake
@@ -213,6 +212,7 @@ homebrew_cask_apps:
   - moom
   - notion
   - obsidian
+  - opera
   - poedit
   - postbox
   - postman
