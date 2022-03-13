@@ -2,3 +2,6 @@
 eggs-directory = /Users/{{ lookup('env', 'USER') }}/.buildout/shared-eggs
 download-cache = /Users/{{ lookup('env', 'USER') }}/.buildout/downloads-cache
 extends-cache = /Users/{{ lookup('env', 'USER') }}/.buildout/extends-cache
+
+[instance]
+blob-storage = ${buildout:directory}/var/blobstorage/blob-storage
