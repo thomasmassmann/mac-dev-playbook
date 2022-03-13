@@ -1,0 +1,23 @@
+---
+- name: Create required project directories
+  file:
+    path: "{{ source_root }}/{{ item.0.dest }}/{{ item.1 }}"
+    state: directory
+    mode: 0755
+  loop: "{{ items|subelements('project_directories', {'skip_missing': true}) }}"
+
+- name: Link folders and files in projects (without symlink_base)
+  file:
+    state: link
+    src: "{{ item.1.src }}"
+    dest: "{{ source_root }}/{{ item.0.dest }}/{{ item.1.dest }}"
+  loop: "{{ items|subelements('symlinks', {'skip_missing': true}) }}"
+  ignore_errors: true
+
+- name: Link folders and files in projects (with symlink base)
+  file:
+    state: link
+    src: "{{ item.0.symlinks_base | default('') }}{{ item.1.src }}"
+    dest: "{{ source_root }}/{{ item.0.dest }}/{{ item.1.dest }}"
+  loop: "{{ items|subelements('symlinks_with_base', {'skip_missing': true}) }}"
+  ignore_errors: true
