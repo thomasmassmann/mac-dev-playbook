@@ -55,8 +55,8 @@ dockitems_persist:
     path: "/Applications/Opera.app"
     pos: 11
   # Spacer at #13 (see tasks/dock.yml)
-  - name: "Sourcetree"
-    path: "/Applications/Sourcetree.app"
+  - name: "SourceTree"
+    path: "/Applications/SourceTree.app"
     pos: 12
   - name: "Visual Studio Code"
     path: "/Applications/Visual Studio Code.app"
