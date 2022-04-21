@@ -293,6 +293,8 @@ pyenv_virtualenvs:
     python: 3.9.9
   - name: SFU-Dunavant-Warehouse-Py39
     python: 3.9.9
+  - name: SFU-Hightower-Py38
+    python: 3.8.12
   - name: SLWF-Plone51-Py27
     python: 2.7.18
   - name: SLWF-Plone52-Py27
